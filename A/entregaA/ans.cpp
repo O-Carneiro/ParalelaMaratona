@@ -23,13 +23,12 @@ int main(){
         int a; cin >> a;
         disks[i] = a;
     } 
+    sort(disks.begin(), disks.end());
     for(i = disks.size()-1; i >=0; i--){
-        if(*files.begin() > disks[i]) break;
+        if(*files.begin() > disks[i] || files.empty()) break;
         auto it = files.lower_bound(disks[i]); 
-        cout << "disk: " << disks[i] << '\n';
         if(*it > disks[i]) it--;
         ans += *it;
-        cout << "*it: " << *it << '\n';
         files.erase(*it);
     }    
     cout << ans << '\n';

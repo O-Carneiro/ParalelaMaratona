@@ -4,7 +4,7 @@ CC=g++
 
 RM=rm -f
 
-EXEC=Aexec
+EXEC=ans
 
 all: $(EXEC)
 
