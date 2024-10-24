@@ -1,4 +1,4 @@
-FLAGS=-O3 -Wall -std=c++17 -mcmodel=large
+FLAGS=-O3 -Wall -lpthread -std=c++17 -mcmodel=large
 
 CC=g++
 
